@@ -38,9 +38,8 @@
 <p>We can deduce, that the derivative of an exponential function \(f\) can always represents a scalar multiple \(\mu f\) of \(f\) itself. \(\mu\) is solely dependent on \(f\)&#39;s base \(a\) and can be calculated using the function</p>
 \[\begin{aligned}
     \mu : \mathbb{R}^+ &\longrightarrow \mathbb{R} \\
-    a &\longmapsto \lim_{x \to 0} \frac{a^x - 1}{x}
+    a &\longmapsto \lim_{x \to 0} \frac{a^x - 1}{x}.
 \end{aligned}\]
-<p>&#40;which we will later identify as the natural logarithm&#41;.</p>
 <p>Numerically, it is fairly easy to approximate some values of \(\mu\). Take for example the following Julia code:</p>
 <pre><code class="language-julia">mu&#40;a&#41; &#61; &#40;a^&#40;1e-10&#41; - 1&#41; / 1e-10
 for i &#61; 1:10
@@ -129,7 +128,7 @@ mu_inv(2) = 7.389057515298066
     &= z.
 \end{aligned}\]
 <p>If you know about logarithms, you might want to note that this implies that \(\mu = \ln\).</p>
-<p>Putting it all together, we have so far found 4 ways of calculating the exponential function \(e^x\): through bisection of \(\ln\), through the Newton-Raphson algorithm applied to \(\ln\) and simply as an exponential. In addition to that, we can calculate \(\ln(x)\) as a limit, using bisection of \(e^x\), using the Newton-Raphson algorithm applied to \(e^x\) and as a numeric integral.</p>
+<p>Putting it all together, we have now found 4 ways of calculating the exponential function \(e^x\): through bisection of \(\ln\), through the Newton-Raphson algorithm applied to \(\ln\) and simply as an exponential. In addition to that, we can calculate \(\ln(x)\) as a limit, using bisection of \(e^x\), using the Newton-Raphson algorithm applied to \(e^x\) and as a numeric integral.</p>
 <p>From a purely mathematical perspective, what we just found out is of even greater significance: We have just calculated the general formula for the derivatives of exponential functions:</p>
 \[\begin{aligned}
     (a^x)' = \ln(a) a^x.
@@ -177,7 +176,7 @@ mu_inv(2) = 7.389057515298066
     &= \left(\sum_{n = 0}^\infty \frac{a^n}{n!}\right) \cdot \left(\sum_{n = 0}^\infty \frac{b^n}{n!}\right) \\
     &= f(a) \cdot f(b).
 \end{aligned}\]
-<p>From this equation, we can now inductively follow</p>
+<p>From this equation, we can now inductively deduce</p>
 \[\begin{aligned}
     f(n a) = f(a)^n
 \end{aligned}\]
@@ -187,7 +186,7 @@ mu_inv(2) = 7.389057515298066
 \[ \forall z \in \mathbb{Q}:\ f(z) = f(1)^z. \]
 <p>Let \(r \in \mathbb{R}.\) As \(\mathbb{Q}\) is a dense subset of \(\mathbb{R}\), there exists a sequence \((z_n)_{n \in \mathbb{N}} \subseteq \mathbb{Q}\) with \( \lim_{n \to \infty} z_n = r.\) As \(f\) is continuous, we get</p>
 \[ f(r) = \lim_{n \to \infty} f(z_n) = \lim_{n \to \infty} f(1)^{z_n} = f(1)^r. \]
-<p>At this point, we would have defined \(e := f(1)\) and conclude \(f(x) = e^x\).</p>
+<p>At this point, we would have defined \(e := f(1)\) and concluded \(f(x) = e^x\).</p>
 <p>Cheers&#33;</p>
 <div class="page-foot">
     <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Dylan Göpel.
