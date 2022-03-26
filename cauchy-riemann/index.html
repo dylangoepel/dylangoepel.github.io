@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+   <title>an interesting way of looking at the cauchy-riemann equations</title>  
+</head>
+<body>
+  <header>
+<div class="blog-name"><a href="/">dylangoepel</a></div>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+  </ul>
+  <img src="/assets/hamburger.svg" id="menu-icon">
+</nav>
+</header>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="an_interesting_way_of_looking_at_the_cauchy-riemann_equations"><a href="#an_interesting_way_of_looking_at_the_cauchy-riemann_equations" class="header-anchor">An interesting way of looking at the Cauchy-Riemann equations</a></h1>
+<p>This is a very short article pointing out a very nice interpretation of the Cauchy-Riemann differential equations.</p>
+<p>In the following, let \(p : \mathbb{C} \to \mathbb{R}^2\) represent the canonical isomorphism between the real vector spaces \(\mathbb{C}\) and \(\mathbb{R}^2\).</p>
+<p>Let \(u, v : \mathbb{R}^2 \to \mathbb{R}\). The function \(u \circ p + (v \circ p)i\) is complex differentiable in \(z \in \mathbb{C}\) if and only if the partial derivatives of \(u\) and \(v\) exist in \(p(z)\) and the following equations hold:</p>
+\[\begin{aligned}
+    \frac{\partial u}{\partial x}(p(z)) &= \frac{\partial v}{\partial y}(p(z)) \\
+    \frac{\partial u}{\partial y}(p(z)) &= -\frac{\partial v}{\partial x}(p(z))
+\end{aligned}\]
+<p>While this theorem might seem surprising at first, it very quickly turns trivial once you realize that the above equations are equivalent to saying that</p>
+\[ \nabla (p \circ f \circ p^{-1}) \in \left\langle
+\begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+\end{pmatrix},
+\begin{pmatrix}
+    0 & 1 \\
+    -1 & 0
+\end{pmatrix}\right\rangle \cong \mathbb{C}. \]
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Dylan Göpel.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
