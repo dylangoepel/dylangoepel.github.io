@@ -1,0 +1,66 @@
+@def title = "Finding the rational canonical form of a matrix"
+@def tags = ["math", "linear algebra", "rational canonical form"]
+
+\newcommand{\rg}{\operatorname{rg}}
+
+# Finding the rational canonical form of a matrix
+#### Exercise
+$$
+    \mathcal{A} = \begin{pmatrix}
+        0 & 0 & -1 & 1 \\
+        1 & -1 & 0 & 1 \\
+        0 & 0 & -1 & 0 \\
+        -1 & 0 & 1 & -2
+    \end{pmatrix} \in \operatorname{Mat}_\mathbb{R}(4, 4).
+$$
+Find a rational canonical form of $\mathcal{A}$.
+
+#### Solution
+\begin{align}
+    \operatorname{chpol}_\mathcal{A} &= x^4 + 4x^3 + 6x^2 + 4x + 1 \\
+    &= (x + 1)^4
+\end{align}
+\begin{align}
+    \rg (\mathcal{A} + 1) &= 4 \\
+    \rg (\mathcal{A} + 1)^2 &= 0 \\ \\
+    \Rightarrow \hspace{1cm} \operatorname{minpol}_\mathcal{A} &= (x + 1)^2
+\end{align}
+\begin{align}
+    \ker(\mathcal{A} + 1) &= \left\langle
+    \begin{pmatrix}
+        0 \\ 1 \\ 0 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        -1 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+    \right\rangle \\
+    \ker((\mathcal{A} + 1)^2) &= (\mathbb{R}^4)^t
+\end{align}
+$$
+    v_0 := \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix} \\
+    v_1 := \mathcal{A} \cdot v_0 = \begin{pmatrix}
+        1 \\ 1 \\ 0 \\ -1
+    \end{pmatrix} \\
+    v_2 := \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix} \\
+    v_3 := \mathcal{A} \cdot v = \begin{pmatrix}
+        -1 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+$$
+$$
+    \mathcal{P} := \begin{pmatrix}
+        1 & 1 & 0 & -1  \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & -1 & 0 & 1
+    \end{pmatrix} \\
+    \mathcal{P}^{-1} = \begin{pmatrix}
+        1 & 0 & 0 & 1 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 1
+    \end{pmatrix}
+$$

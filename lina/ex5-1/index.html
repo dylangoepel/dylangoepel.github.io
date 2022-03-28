@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+   <title>Finding the rational canonical form of a matrix</title>  
+</head>
+<body>
+  <header>
+<div class="blog-name"><a href="/">dylangoepel</a></div>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+  </ul>
+  <img src="/assets/hamburger.svg" id="menu-icon">
+</nav>
+</header>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="finding_the_rational_canonical_form_of_a_matrix"><a href="#finding_the_rational_canonical_form_of_a_matrix" class="header-anchor">Finding the rational canonical form of a matrix</a></h1>
+<h4 id="exercise"><a href="#exercise" class="header-anchor">Exercise</a></h4>
+\[
+    \mathcal{A} = \begin{pmatrix}
+        0 & 0 & -1 & 1 \\
+        1 & -1 & 0 & 1 \\
+        0 & 0 & -1 & 0 \\
+        -1 & 0 & 1 & -2
+    \end{pmatrix} \in \operatorname{Mat}_\mathbb{R}(4, 4).
+\]
+<p>Find a rational canonical form of \(\mathcal{A}\).</p>
+<h4 id="solution"><a href="#solution" class="header-anchor">Solution</a></h4>
+\[\begin{aligned}
+    \operatorname{chpol}_\mathcal{A} &= x^4 + 4x^3 + 6x^2 + 4x + 1 \\
+    &= (x + 1)^4
+\end{aligned}\]
+\[\begin{aligned}
+    \operatorname{rg} (\mathcal{A} + 1) &= 4 \\
+    \operatorname{rg} (\mathcal{A} + 1)^2 &= 0 \\ \\
+    \Rightarrow \hspace{1cm} \operatorname{minpol}_\mathcal{A} &= (x + 1)^2
+\end{aligned}\]
+\[\begin{aligned}
+    \ker(\mathcal{A} + 1) &= \left\langle
+    \begin{pmatrix}
+        0 \\ 1 \\ 0 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        -1 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+    \right\rangle \\
+    \ker((\mathcal{A} + 1)^2) &= (\mathbb{R}^4)^t
+\end{aligned}\]
+\[
+    v_0 := \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix} \\
+    v_1 := \mathcal{A} \cdot v_0 = \begin{pmatrix}
+        1 \\ 1 \\ 0 \\ -1
+    \end{pmatrix} \\
+    v_2 := \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix} \\
+    v_3 := \mathcal{A} \cdot v = \begin{pmatrix}
+        -1 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+\]
+\[
+    \mathcal{P} := \begin{pmatrix}
+        1 & 1 & 0 & -1  \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & -1 & 0 & 1
+    \end{pmatrix} \\
+    \mathcal{P}^{-1} = \begin{pmatrix}
+        1 & 0 & 0 & 1 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 1
+    \end{pmatrix} \\
+\]
+\[
+    \mathcal{P}^{-1} \cdot \mathcal{A} \cdot \mathcal{P} = \begin{pmatrix}
+        -1 & 0 & 0 & 0 \\
+        1 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 1 & -1
+    \end{pmatrix}
+\]
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Dylan Göpel.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
