@@ -35,7 +35,7 @@
     &= a^x \lim_{dx \to 0} \frac{f(dx) - f(0)}{dx} \\
     &= a^x \cdot f'(0).
 \end{aligned}\]
-<p>We can deduce, that the derivative of an exponential function \(f\) can always represents a scalar multiple \(\mu f\) of \(f\) itself. \(\mu\) is solely dependent on \(f\)&#39;s base \(a\) and can be calculated using the function</p>
+<p>We can deduce, that the derivative of an exponential function \(f\) can always be represented as a scalar multiple \(\mu f\) of \(f\) itself. \(\mu\) is solely dependent on \(f\)&#39;s base \(a\) and can be calculated using the function</p>
 \[\begin{aligned}
     \mu : \mathbb{R}^+ &\longrightarrow \mathbb{R} \\
     a &\longmapsto \lim_{x \to 0} \frac{a^x - 1}{x}.
@@ -79,7 +79,7 @@ e &#61; &#40;a &#43; b&#41; / 2
 <pre><code class="plaintext code-output">e = 2.7182790353371393
 </code></pre>
 <h2 id="getting_to_know_mu_and_mu-1"><a href="#getting_to_know_mu_and_mu-1" class="header-anchor">Getting to know \(\mu\) and \(\mu^{-1}\)</a></h2>
-<p>When first encountering the functions \(\mu\), \(\mu^{-1}\), we may want to first spend some time on finding new ways of calculating and approximating them. A first step might be to calculate the derivative \(\mu'\), as this would allow us to not only represent \(\mu\) as an integral &#40;and to approximate it using numeric integration&#41;, but also to compute \(\mu^{-1}\) much more efficiently using the Newton-Raphson algorithm.</p>
+<p>When first encountering the functions \(\mu\), \(\mu^{-1}\), we may want to spend some time on finding new ways of calculating and approximating them. A first step might be to calculate the derivative \(\mu'\), as this would allow us to not only represent \(\mu\) as an integral &#40;and to approximate it using numeric integration&#41;, but also to compute \(\mu^{-1}\) much more efficiently using the Newton-Raphson algorithm.</p>
 <p>For \(a \in \mathbb{R}\), we have</p>
 \[\begin{aligned}
     \mu'(a) &= \lim_{dx \to 0} \frac{\mu(a + dx) - \mu(a)}{dx} \\
