@@ -33,7 +33,7 @@
 </url>
 <url>
     <loc>https://dylangoepel.github.io/cauchy-riemann/index.html</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -62,8 +62,14 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://dylangoepel.github.io/problems/irreducible/index.html</loc>
+    <lastmod>2022-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://dylangoepel.github.io/index.html</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
