@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=M+PLUS+1+Code:wght@500&display=swap');
+
+html {
+    background-color: #ffff;
+    color: #000;
+}
+body {
+    font-family: "Fira Mono", sans-serif;
+    padding: 0px;
+    margin: 20pt;
+    width: 60vw;
+    margin: 2vh 20vw 5vh 20vw;
+}
+
+body, p, h1, h2, h3, h4, h5 {
+    font-size: 11pt;
+}
+h1 {
+    margin-top: 15pt;
+}
+
+h1:before {
+    content: "> ";
+}
+h2:before {
+    content: ">> ";
+}
+h3:before {
+    content: ">>> ";
+}
+
+code {
+    font-family: "Fira Mono", monospace;
+}
+div.sourceCode {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+.katex-display .katex {
+    padding: 10px 10px 10px 10px;
+}
+
+.navline {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 30px 10px 30px;
+    background-color: #ffff;
+    color: #111f;
+    border-radius: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    width: calc(100vw - 80px);
+    margin: 2vh 40px 5vh 40px;
+  }
+
+  h1 {
+      background-color: #ddd;
+      border: 2px dotted black;
+      border-radius: 4px;
+      padding: 5pt;
+      padding-left: 10pt;
+  }
+
+  h1::before {
+      content: "> ";
+  }
+}
