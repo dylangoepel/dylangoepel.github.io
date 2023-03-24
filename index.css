@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=M+PLUS+1+Code:wght@500&display=swap');
-
 html {
     background-color: #e9e9e9;
     color: #000;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    min-height: 100vh;
 }
 body {
     font-family: "Fira Mono", sans-serif;
-    margin: calc(20pt - 40px);
     width: 60vw;
     margin: 2vh 20vw 5vh 20vw;
     padding: 0px;
     padding-top: 20px;
+}
+
+p {
+    text-align: justify;
 }
 
 body, p, h1, h2, h3, h4, h5 {
@@ -52,7 +57,62 @@ div.sourceCode {
 }
 @media only screen and (max-width: 1000px) {
   body {
-    width: calc(100vw - 80px);
-    margin: 2vh 40px 5vh 40px;
+    width: 90vw;
+    margin: 2vh 5vw 5vh 5vw;
+    padding: 0px;
+  }
+
+  .katex-display {
+      overflow: scroll;
+  }
+
+  p {
+      text-align: left;
+      font-size: 20pt;
+      font-family: "Roboto", sans-serif;
+      line-height: 1.6;
+      text-align: justify;
+  }
+
+  h1 {
+      font-size: 36pt;
+  }
+  h2 {
+      font-size: 33pt;
+  }
+  h3 {
+      font-size: 30pt;
+  }
+  h4 {
+      font-size: 27pt;
+  }
+
+  h1, h2, h3, h4 {
+      font-weight: normal;
+      padding: 50px;
+      margin: 50px 0px 20px 0px;
+      text-align: center;
+      background-color: #d9d9d9;
+      border-radius: 4px;
+  }
+    h1:before {
+        content: "";
+    }
+    h2:before {
+        content: "";
+    }
+    h3:before {
+        content: "";
+    }
+
+  span.katex {
+    font-size: 140%;
+  }
+
+  code {
+      font-size: 24pt;
+  }
+  body code span.kw {
+      font-weight: normal;
   }
 }
