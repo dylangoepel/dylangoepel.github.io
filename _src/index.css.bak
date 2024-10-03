@@ -1,0 +1,120 @@
+html {
+    background-color: #e8dfca;
+    color: #000;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    min-height: 100vh;
+}
+body {
+    font-family: "Fira Mono", sans-serif;
+    width: 60vw;
+    margin: 2vh 20vw 5vh 20vw;
+    padding: 0px;
+    padding-top: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+body, p, h1, h2, h3, h4, h5 {
+    font-size: 11pt;
+}
+h1 {
+    margin-top: 15pt;
+}
+
+h1:before {
+    content: "> ";
+}
+h2:before {
+    content: ">> ";
+}
+h3:before {
+    content: ">>> ";
+}
+
+code {
+    font-family: "Fira Mono", monospace;
+}
+div.sourceCode {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+.katex-display .katex {
+    padding: 10px 10px 10px 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    width: 80vw;
+    margin: 2vh 10vw 5vh 10vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    width: 90vw;
+    margin: 2vh 5vw 5vh 5vw;
+    padding: 0px;
+  }
+
+  .katex-display {
+      overflow: scroll;
+  }
+
+  p {
+      text-align: left;
+      font-size: 20pt;
+      font-family: "Roboto", sans-serif;
+      line-height: 1.6;
+      text-align: justify;
+  }
+
+  h1 {
+      font-size: 33pt;
+      margin: 100px 0px 20px 0px;
+  }
+  h2 {
+      font-size: 31pt;
+      margin: 50px 0px 20px 0px;
+  }
+  h3 {
+      font-size: 29pt;
+      margin: 30px 0px 20px 0px;
+  }
+  h4 {
+      font-size: 27pt;
+      margin: 20px 0px 10px 0px;
+  }
+
+  h1, h2, h3, h4 {
+      font-weight: normal;
+      margin: 100px 0px 20px 0px;
+      border-radius: 4px;
+  }
+    h1:before {
+        content: "";
+    }
+    h2:before {
+        content: "";
+    }
+    h3:before {
+        content: "";
+    }
+
+  span.katex {
+    font-size: 140%;
+    line-height: 0.8;
+  }
+
+  code {
+      font-size: 24pt;
+  }
+  body code span.kw {
+      font-weight: normal;
+  }
+}
