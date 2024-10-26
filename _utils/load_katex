@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-katexDir=$1
+dir=$1
 katexBase="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist"
 
 function loadIfNotFound {
@@ -13,25 +13,28 @@ function loadIfNotFound {
     curl -Ls -o "$1" "$2"
 }
 function loadKatexFonts() {
-    echo "[*] downloading katex into \"$katexDir\"..."
-    mkdir -p "$katexDir"
-    mkdir -p "$katexDir/fonts"
-    loadIfNotFound "$katexDir/katex.min.js" "$katexBase/katex.min.js"
-    loadIfNotFound "$katexDir/katex.min.css" "$katexBase/katex.min.css"
+    echo "[*] downloading katex into \"$dir\"..."
+    mkdir -p "$dir"
+    mkdir -p "$dir/fonts"
+    loadIfNotFound "$dir/katex.min.js" "$katexBase/katex.min.js"
+    loadIfNotFound "$dir/katex.min.css" "$katexBase/katex.min.css"
 
-    grep -Eo 'fonts/[^)]+' "$katexDir/katex.min.css" |
+    grep -Eo 'fonts/[^)]+' "$dir/katex.min.css" |
         sed 's,^fonts/,,g' | while read url
     do
-        loadIfNotFound "$katexDir/fonts/$url" "$katexBase/fonts/$url"
+        loadIfNotFound "$dir/fonts/$url" "$katexBase/fonts/$url"
     done
 }
 
-[ -z "$katexDir" ] && echo usage: $0 '<output directory>' && exit
+function loadFiraCode() {
+    echo "[***] downloading fira code into \"$dir\""
+    loadIfNotFound "$dir/fira-code.css" "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+}
 
-if [ -d "$katexDir" ] 
+[ -z "$dir" ] && echo usage: $0 '<output directory>' && exit
+
+if [ -d "$dir" ]
 then
-    echo "[+] found $katexDir"
+    echo "[+] found $1"
 else
-    loadKatexFonts
 fi
-[ -d "$katexDir" ] || loadKatexFonts
